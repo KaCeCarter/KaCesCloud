@@ -13,11 +13,12 @@ import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 const LogoWrapper = styled.div`
-// Every time you have a div you need to create a styled component or it
+// Every time you have a div you need to create a 
+// styled component or it
 height: 45px;
 display: grid;
 grid-template-columns: 25% auto;
-`;
+`
 
 
 
@@ -27,11 +28,11 @@ function Header() {
  <Wrapper>
 
 <LogoWrapper>
-<div>
+<Menu>
 {/* menu icon */}
 <FormatListBulletedIcon />
 {/* menu icon */}
-</div>
+</Menu>
 
 <Logo>
 {/* gmail logo */}
@@ -86,6 +87,42 @@ height: 45px;
 const SearchWrapper = styled.div`
 `
 const SearchBarWrapper = styled.div`
+background-color: #598ec6;
+width: 100%;
+max-width: 750px;
+display: grid;
+
+// this line seperates the 3 different elements in the 'SearchBarWrapper' element
+grid-template-columns: 10% auto 7%;
+// this line seperates the 3 different elements in the 'SearchBarWrapper' element
+
+
+place-items: center;
+height: 45px;
+border-radius: 6px;
+
+input {
+  // This adjusts the input bar in the searchwraper
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none
+  font-size: 18px;
+
+  :focus{
+    outline: none;
+    // it's important to ensure that removing the outline doesn't 
+    // negatively impact accessibility for users who rely on keyboard 
+    // navigation. If the outline is removed, an alternative focus 
+    // indicator should be provided to maintain accessibility
+    // standards.
+  }
+}
 `
+
 const IconWrapper = styled.div`
+`
+const Menu = styled.div`
+display: grid;
+place-items: center;
 `
