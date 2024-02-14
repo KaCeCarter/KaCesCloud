@@ -11,6 +11,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 
 const LogoWrapper = styled.div`
 // Every time you have a div you need to create a 
@@ -55,8 +58,8 @@ function Header() {
   </SearchWrapper>
 
   <IconWrapper>
-
-
+<AccountCircleIcon/>
+<SettingsApplicationsIcon/>
   </IconWrapper>
 
 
@@ -87,7 +90,7 @@ height: 45px;
 const SearchWrapper = styled.div`
 `
 const SearchBarWrapper = styled.div`
-background-color: #598ec6;
+background-color: #f1f3f4;
 width: 100%;
 max-width: 750px;
 display: grid;
@@ -101,12 +104,22 @@ place-items: center;
 height: 45px;
 border-radius: 6px;
 
+
+// In Material-UI, SVG icons are often composed of multiple elements, 
+// with the root element having the class name .MuiSvgIcon-root. 
+// This class is used by Material-UI's internal styles to apply 
+// styles specifically to SVG icons.
+.MuiSvgIcon-root{
+  color: #606567;
+}
+
+
 input {
   // This adjusts the input bar in the searchwraper
   width: 100%;
   height: 30px;
   background: none;
-  border: none
+  border: none;
   font-size: 18px;
 
   :focus{
@@ -121,6 +134,15 @@ input {
 `
 
 const IconWrapper = styled.div`
+margin-left: 8px;
+display: grid;
+
+// every column in the icon wrapper will be automatically spacing out 
+// the icons equally
+grid-template-columns: repeat(4, auto);
+.MuiSvgIcon-root{
+  color: #606567;
+}
 `
 const Menu = styled.div`
 display: grid;
